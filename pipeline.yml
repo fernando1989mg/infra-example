@@ -1,0 +1,17 @@
+version: 2.0
+type: infra
+metadata:
+  productId: OnePay
+  componentId: infra
+  version: 0.0.4
+agent:
+  packages:
+    - terraform
+stages:
+  - type: release
+    enabled: true
+    commands:
+      - ls
+    artifacts:
+      - type: tgz
+        name: infra
